@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:schooler/custom_widgets/custom_big_icon.dart';
+import 'package:schooler/parent/parent_trips.dart';
+import 'package:schooler/parent/Parent_activities.dart';
+import 'package:schooler/teacher/teacher_my_classes.dart';
 
 class TeacherProfile extends StatelessWidget {
   @override
@@ -41,6 +44,14 @@ class TeacherProfile extends StatelessWidget {
                   'icons/trips.png',
                 ),
                 iconName: 'Trips',
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ParentTrips(),
+                    ),
+                  );
+                },
               ),
             ),
             Expanded(
@@ -50,6 +61,14 @@ class TeacherProfile extends StatelessWidget {
                   'icons/activities.png',
                 ),
                 iconName: 'Activities',
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ParentActivities(),
+                    ),
+                  );
+                },
               ),
             ),
           ]),
@@ -62,6 +81,14 @@ class TeacherProfile extends StatelessWidget {
                     'icons/my_classes.png',
                   ),
                   iconName: 'My Classes',
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => TeacherMyClasses(),
+                      ),
+                    );
+                  },
                 ),
               ),
             ],
@@ -71,13 +98,3 @@ class TeacherProfile extends StatelessWidget {
     );
   }
 }
-
-// Expanded(
-//   child: CustomBigIcon(
-//     colora: Colors.red.shade400,
-//     icon: AssetImage(
-//       'icons/course_work.png',
-//     ),
-//     iconName: 'CourseWork',
-//   ),
-// ),

@@ -86,7 +86,10 @@ class _NewsPageAdminState extends State<NewsPageAdmin> {
                 text: 'HELP',
               ),
               CreateDrawerButton(
-                ontap: () {},
+                ontap: () {
+                  Navigator.pop(context);
+                  Navigator.pop(context);
+                },
                 icon: Icons.logout,
                 text: 'LOGOUT',
               ),

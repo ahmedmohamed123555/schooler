@@ -1,5 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:schooler/child/child_attendance.dart';
+import 'package:schooler/child/child_coursework.dart';
+import 'package:schooler/child/child_teacher_list.dart';
 import 'package:schooler/custom_widgets/custom_big_icon.dart';
+import 'child_attendance.dart';
+import 'package:schooler/parent/parent_subscriptions.dart';
+import 'child_class_list.dart';
+import 'child_teacher_list.dart';
+import 'child_coursework.dart';
 
 class ChildProfile extends StatelessWidget {
   @override
@@ -38,6 +46,14 @@ class ChildProfile extends StatelessWidget {
                     'icons/attendance.png',
                   ),
                   iconName: 'Attendance',
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ChildAttendans(),
+                      ),
+                    );
+                  },
                 ),
               ),
             ],
@@ -51,6 +67,14 @@ class ChildProfile extends StatelessWidget {
                     'icons/course_work.png',
                   ),
                   iconName: 'CourseWork',
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ChildCourseWork(),
+                      ),
+                    );
+                  },
                 ),
               ),
               Expanded(
@@ -60,6 +84,14 @@ class ChildProfile extends StatelessWidget {
                     'icons/subscribe.png',
                   ),
                   iconName: 'Subscriptions',
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ParentSubscriptions(),
+                      ),
+                    );
+                  },
                 ),
               ),
               Expanded(
@@ -82,6 +114,14 @@ class ChildProfile extends StatelessWidget {
                     'icons/teacher_list.png',
                   ),
                   iconName: 'Teachers List',
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ChildTeacherList(),
+                      ),
+                    );
+                  },
                 ),
               ),
               Expanded(
@@ -91,6 +131,14 @@ class ChildProfile extends StatelessWidget {
                     'icons/class_list.png',
                   ),
                   iconName: 'Class List',
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ChildClassList(),
+                      ),
+                    );
+                  },
                 ),
               ),
               Expanded(

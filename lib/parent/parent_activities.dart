@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:schooler/custom_widgets/custom_biger_icon.dart';
+import 'parent_activity_details.dart';
 
-class ChildCourseWork extends StatelessWidget {
+class ParentActivities extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Coursework'),
+        title: Text('Activities'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -18,19 +19,24 @@ class ChildCourseWork extends StatelessWidget {
                   Expanded(
                     child: CustomBigerIcon(
                       colora: Colors.green.shade900,
-                      iconName: 'Mathematics',
+                      iconName: 'Football',
                       icon: AssetImage(
-                        'icons/mathematics.png',
+                        'icons/football.png',
                       ),
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => ParentActivityDetails()));
+                      },
                     ),
                   ),
                   Expanded(
                     child: CustomBigerIcon(
                       colora: Colors.blue.shade400,
-                      iconName: 'Physics',
+                      iconName: 'Swimming',
                       icon: AssetImage(
-                        'icons/physics.png',
+                        'icons/swimming.png',
                       ),
                       onTap: () {},
                     ),
@@ -44,9 +50,9 @@ class ChildCourseWork extends StatelessWidget {
                   Expanded(
                     child: CustomBigerIcon(
                       colora: Colors.orange.shade800,
-                      iconName: 'Biology',
+                      iconName: 'Basketball',
                       icon: AssetImage(
-                        'icons/biology.png',
+                        'icons/basketball.png',
                       ),
                       onTap: () {},
                     ),
@@ -54,9 +60,9 @@ class ChildCourseWork extends StatelessWidget {
                   Expanded(
                     child: CustomBigerIcon(
                       colora: Colors.brown,
-                      iconName: 'Chemistry',
+                      iconName: 'Tennis',
                       icon: AssetImage(
-                        'icons/chemistry.png',
+                        'icons/tennis.png',
                       ),
                       onTap: () {},
                     ),
@@ -70,19 +76,19 @@ class ChildCourseWork extends StatelessWidget {
                   Expanded(
                     child: CustomBigerIcon(
                       colora: Colors.blue.shade900,
-                      iconName: 'History',
+                      iconName: 'Cycling',
                       icon: AssetImage(
-                        'icons/history.png',
+                        'icons/cycling.png',
                       ),
                       onTap: () {},
                     ),
                   ),
                   Expanded(
                     child: CustomBigerIcon(
-                      colora: Colors.red.shade400,
-                      iconName: 'English',
+                      colora: Colors.orange.shade300,
+                      iconName: 'Running',
                       icon: AssetImage(
-                        'icons/english.png',
+                        'icons/running.png',
                       ),
                       onTap: () {},
                     ),

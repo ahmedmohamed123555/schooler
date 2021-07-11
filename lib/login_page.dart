@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'parent/news_page_parent.dart';
 import 'admin/news_page_admin.dart';
 import 'teacher/news_page_teacher.dart';
+import 'package:schooler/parent/start_page_parent.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -22,7 +22,7 @@ class _LoginPageState extends State<LoginPage> {
       Navigator.push(
         context,
         MaterialPageRoute(builder: (context) {
-          return NewsPageParent();
+          return StartPageParent();
         }),
       );
     } else if (chosenAccount == 'Teacher') {
@@ -109,6 +109,7 @@ class _LoginPageState extends State<LoginPage> {
             Padding(
               padding: const EdgeInsets.fromLTRB(20, 20, 20, 10),
               child: TextField(
+                //onChanged: (){},
                 decoration: InputDecoration(
                   filled: true,
                   fillColor: Colors.white,
@@ -138,6 +139,7 @@ class _LoginPageState extends State<LoginPage> {
             Padding(
               padding: const EdgeInsets.fromLTRB(20, 0, 20, 10),
               child: TextField(
+                //onChanged: (){},
                 decoration: InputDecoration(
                   filled: true,
                   fillColor: Colors.white,

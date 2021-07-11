@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class CustomBigIcon extends StatelessWidget {
-  CustomBigIcon({this.icon, this.colora, this.iconName, this.onTap});
+class CustomBigerIcon extends StatelessWidget {
+  CustomBigerIcon({this.icon, this.colora, this.iconName, this.onTap});
   final ImageProvider icon;
   final Color colora;
   final String iconName;
@@ -20,8 +20,8 @@ class CustomBigIcon extends StatelessWidget {
               child: GestureDetector(
                 onTap: onTap,
                 child: Container(
-                  width: 120.0,
-                  height: 120.0,
+                  width: 180.0,
+                  height: 180.0,
                   decoration: BoxDecoration(
                     color: colora,
                     borderRadius: BorderRadius.circular(20.0),

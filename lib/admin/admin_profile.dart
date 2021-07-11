@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:schooler/custom_widgets/custom_big_icon.dart';
+import 'admin_accounts.dart';
+import 'package:schooler/admin/admin_subscriptions.dart';
 
 class AdminProfile extends StatelessWidget {
   @override
@@ -20,6 +22,12 @@ class AdminProfile extends StatelessWidget {
                     'icons/accounts.png',
                   ),
                   iconName: 'Accounts',
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => AdminAccounts()));
+                  },
                 ),
               ),
               Expanded(
@@ -60,6 +68,13 @@ class AdminProfile extends StatelessWidget {
                     'icons/subscribe.png',
                   ),
                   iconName: 'Subscriptions',
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => AdminSubscriptions()),
+                    );
+                  },
                 ),
               ),
               Expanded(

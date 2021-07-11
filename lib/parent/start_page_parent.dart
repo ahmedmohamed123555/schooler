@@ -2,19 +2,23 @@ import 'package:flutter/material.dart';
 import 'package:schooler/child/child_profile.dart';
 import '../custom_widgets/create_drawer_button.dart';
 import 'package:schooler/news_content.dart';
+import 'parent_profile.dart';
 
-class NewsPageParent extends StatefulWidget {
+class StartPageParent extends StatefulWidget {
   @override
-  _NewsPageParentState createState() => _NewsPageParentState();
+  _StartPageParentState createState() => _StartPageParentState();
 }
 
-class _NewsPageParentState extends State<NewsPageParent> {
+class _StartPageParentState extends State<StartPageParent> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         actions: [
-          Icon(Icons.notifications),
+          Icon(
+            Icons.notifications,
+            size: 30.0,
+          ),
           SizedBox(
             width: 20.0,
           ),
@@ -69,7 +73,14 @@ class _NewsPageParentState extends State<NewsPageParent> {
                     ),
                   )),
               CreateDrawerButton(
-                ontap: () {},
+                ontap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ParentProfile(),
+                    ),
+                  );
+                },
                 icon: Icons.account_circle,
                 text: 'PROFILE',
               ),
@@ -89,7 +100,10 @@ class _NewsPageParentState extends State<NewsPageParent> {
                 text: 'HELP',
               ),
               CreateDrawerButton(
-                ontap: () {},
+                ontap: () {
+                  Navigator.pop(context);
+                  Navigator.pop(context);
+                },
                 icon: Icons.logout,
                 text: 'LOGOUT',
               ),
@@ -101,18 +115,3 @@ class _NewsPageParentState extends State<NewsPageParent> {
     );
   }
 }
-
-// Material(
-//                           borderRadius: BorderRadius.all(
-//                             Radius.circular(60.0),
-//                           ),
-//                           elevation: 10.0,
-//                           child: Padding(
-//                             padding: const EdgeInsets.all(8.0),
-//                             child: Image.asset(
-//                               'images/parent1.jpg',
-//                               width: 80.0,
-//                               height: 80.0,
-//                             ),
-//                           ),
-//                         ),
