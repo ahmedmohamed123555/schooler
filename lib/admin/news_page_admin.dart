@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:schooler/admin/admin_profile.dart';
 import 'package:schooler/custom_widgets/create_drawer_button.dart';
 import 'package:schooler/news_content.dart';
+import 'create_news_bottom_sheet.dart';
 
 class NewsPageAdmin extends StatefulWidget {
   @override
@@ -12,6 +13,19 @@ class _NewsPageAdminState extends State<NewsPageAdmin> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => CreateNewsBottomSheet()),
+          );
+        },
+        child: Icon(
+          Icons.add,
+          color: Colors.white,
+        ),
+        backgroundColor: Colors.teal,
+      ),
       appBar: AppBar(
         actions: [
           Icon(Icons.notifications),

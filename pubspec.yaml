@@ -24,6 +24,7 @@ dependencies:
   flutter:
     sdk: flutter
   percent_indicator: "^2.1.7+2"
+  syncfusion_flutter_calendar: ^18.4.46
 
 
   # The following adds the Cupertino Icons font to your application.

@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:schooler/admin/admin_schedule.dart';
 import 'package:schooler/custom_widgets/custom_big_icon.dart';
 import 'admin_accounts.dart';
 import 'package:schooler/admin/admin_subscriptions.dart';
+import 'admin_calendar.dart';
+import 'admin_fees.dart';
 
 class AdminProfile extends StatelessWidget {
   @override
@@ -37,6 +40,12 @@ class AdminProfile extends StatelessWidget {
                     'icons/calendar.png',
                   ),
                   iconName: 'Calendar',
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => AdminCalendar()));
+                  },
                 ),
               ),
               Expanded(
@@ -46,6 +55,12 @@ class AdminProfile extends StatelessWidget {
                     'icons/schedule.png',
                   ),
                   iconName: 'Schedule',
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => AdminSchedule()));
+                  },
                 ),
               ),
             ],
@@ -59,6 +74,10 @@ class AdminProfile extends StatelessWidget {
                     'icons/fees.png',
                   ),
                   iconName: 'Fees',
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => AdminFees()));
+                  },
                 ),
               ),
               Expanded(
