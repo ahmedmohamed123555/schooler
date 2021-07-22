@@ -15,7 +15,7 @@ class ParentChildInfo extends StatelessWidget {
             backgroundImage: AssetImage('images/child1.jpg'),
           ),
           Text(
-            'Adam Magdy',
+            'Adam Gamal',
             style: TextStyle(
               fontSize: 25.0,
               fontWeight: FontWeight.bold,

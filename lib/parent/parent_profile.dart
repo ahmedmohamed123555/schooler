@@ -156,7 +156,7 @@ class ParentProfile extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    'Adam Magdy',
+                    'Adam Gamal',
                     style: TextStyle(
                       fontSize: 20.0,
                       color: Colors.grey.shade600,

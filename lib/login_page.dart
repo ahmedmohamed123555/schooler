@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'admin/news_page_admin.dart';
 import 'teacher/news_page_teacher.dart';
 import 'package:schooler/parent/start_page_parent.dart';
+import 'student/student_start_page.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -32,10 +33,17 @@ class _LoginPageState extends State<LoginPage> {
           return NewsPageTeacher();
         }),
       );
+    } else if (chosenAccount == 'Student') {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) {
+          return StudentStartPage();
+        }),
+      );
     }
   }
 
-  List accounts = ['Admin', 'Parent', 'Teacher'];
+  List accounts = ['Admin', 'Parent', 'Teacher', 'Student'];
 
   @override
   Widget build(BuildContext context) {

@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:schooler/child/child_profile.dart';
+import 'package:schooler/parent/parent_child_info.dart';
 import '../custom_widgets/create_drawer_button.dart';
 import 'package:schooler/news_content.dart';
-import 'parent_profile.dart';
 
-class StartPageParent extends StatefulWidget {
+class StudentStartPage extends StatefulWidget {
   @override
-  _StartPageParentState createState() => _StartPageParentState();
+  _StudentStartPageState createState() => _StudentStartPageState();
 }
 
-class _StartPageParentState extends State<StartPageParent> {
+class _StudentStartPageState extends State<StudentStartPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,12 +59,12 @@ class _StartPageParentState extends State<StartPageParent> {
                       children: [
                         CircleAvatar(
                           radius: 45.0,
-                          backgroundImage: AssetImage('images/parent1.jpg'),
+                          backgroundImage: AssetImage('images/child1.jpg'),
                         ),
                         Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Text(
-                            'Gamal Magdy',
+                            'Adam Gamal',
                             style:
                                 TextStyle(color: Colors.white, fontSize: 20.0),
                           ),
@@ -78,7 +78,7 @@ class _StartPageParentState extends State<StartPageParent> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => ParentProfile(),
+                      builder: (context) => ParentChildInfo(),
                     ),
                   );
                 },
@@ -89,11 +89,6 @@ class _StartPageParentState extends State<StartPageParent> {
                 ontap: () {},
                 icon: Icons.chat,
                 text: 'CHAT',
-              ),
-              CreateDrawerButton(
-                ontap: () {},
-                icon: Icons.attach_money,
-                text: 'FEES',
               ),
               CreateDrawerButton(
                 ontap: () {},
