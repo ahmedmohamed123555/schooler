@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:schooler/teacher/teacher_profile.dart';
 import 'package:schooler/custom_widgets/create_drawer_button.dart';
 import 'package:schooler/news_content.dart';
+import 'teacher_info.dart';
 
 class NewsPageTeacher extends StatefulWidget {
   @override
@@ -69,7 +70,11 @@ class _NewsPageTeacherState extends State<NewsPageTeacher> {
                     ),
                   )),
               CreateDrawerButton(
-                ontap: () {},
+                ontap: () {
+                  Navigator.pop(context);
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => TeacherInfo()));
+                },
                 icon: Icons.account_circle,
                 text: 'PROFILE',
               ),

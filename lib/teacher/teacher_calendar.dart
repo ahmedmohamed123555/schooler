@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_calendar/calendar.dart';
 
-class ChildCalendar extends StatelessWidget {
+class TeacherCalendar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

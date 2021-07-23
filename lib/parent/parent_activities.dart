@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:schooler/custom_widgets/custom_biger_icon.dart';
+import 'package:schooler/login_page.dart';
+import 'package:schooler/teacher/teacher_activity_football.dart';
 import 'parent_activity_details.dart';
 
 class ParentActivities extends StatelessWidget {
+  LoginPage loginPage = LoginPage();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,10 +27,20 @@ class ParentActivities extends StatelessWidget {
                         'icons/football.png',
                       ),
                       onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => ParentActivityDetails()));
+                        if (loginPage.pageState.getChosenAccount() ==
+                            'Parent') {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      ParentActivityDetails()));
+                        } else {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      TeacherActivityFootball()));
+                        }
                       },
                     ),
                   ),

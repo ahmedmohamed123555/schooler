@@ -3,6 +3,8 @@ import 'package:schooler/custom_widgets/custom_big_icon.dart';
 import 'package:schooler/parent/parent_trips.dart';
 import 'package:schooler/parent/Parent_activities.dart';
 import 'package:schooler/teacher/teacher_my_classes.dart';
+import 'package:schooler/teacher/teacher_schedule.dart';
+import 'teacher_calendar.dart';
 
 class TeacherProfile extends StatelessWidget {
   @override
@@ -23,6 +25,12 @@ class TeacherProfile extends StatelessWidget {
                     'icons/calendar.png',
                   ),
                   iconName: 'Calendar',
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => TeacherCalendar()));
+                  },
                 ),
               ),
               Expanded(
@@ -32,6 +40,12 @@ class TeacherProfile extends StatelessWidget {
                     'icons/schedule.png',
                   ),
                   iconName: 'Schedule',
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => TeacherSchedule()));
+                  },
                 ),
               ),
             ],

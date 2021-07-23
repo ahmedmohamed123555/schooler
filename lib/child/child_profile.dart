@@ -5,6 +5,7 @@ import 'package:schooler/child/child_teacher_list.dart';
 import 'package:schooler/custom_widgets/custom_big_icon.dart';
 import 'child_attendance.dart';
 import 'package:schooler/parent/parent_subscriptions.dart';
+import 'child_calendar.dart';
 import 'child_class_list.dart';
 import 'child_teacher_list.dart';
 import 'child_coursework.dart';
@@ -23,12 +24,19 @@ class ChildProfile extends StatelessWidget {
             children: [
               Expanded(
                 child: CustomBigIcon(
-                  colora: Colors.red.shade400,
-                  icon: AssetImage(
-                    'icons/calendar.png',
-                  ),
-                  iconName: 'Calendar',
-                ),
+                    colora: Colors.red.shade400,
+                    icon: AssetImage(
+                      'icons/calendar.png',
+                    ),
+                    iconName: 'Calendar',
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ChildCalendar(),
+                        ),
+                      );
+                    }),
               ),
               Expanded(
                 child: CustomBigIcon(

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:schooler/child/child_class_list.dart';
 import 'package:schooler/custom_widgets/custom_big_icon.dart';
+import 'package:schooler/teacher/teacher_attendance.dart';
+import 'package:schooler/teacher/teacher_coursework.dart';
+import 'package:schooler/teacher/teacher_grading.dart';
 
 class Grade3ClassA extends StatelessWidget {
   @override
@@ -23,6 +26,14 @@ class Grade3ClassA extends StatelessWidget {
                       'icons/attendance.png',
                     ),
                     iconName: 'Attendance',
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => TeacherAttendance(),
+                        ),
+                      );
+                    },
                   ),
                 ),
                 Expanded(
@@ -32,6 +43,14 @@ class Grade3ClassA extends StatelessWidget {
                       'icons/course_work.png',
                     ),
                     iconName: 'Coursework',
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => TeacherCoursework(),
+                        ),
+                      );
+                    },
                   ),
                 ),
                 Expanded(
@@ -41,6 +60,14 @@ class Grade3ClassA extends StatelessWidget {
                       'icons/grading.png',
                     ),
                     iconName: 'Grading',
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => TeacherGrading(),
+                        ),
+                      );
+                    },
                   ),
                 ),
               ],

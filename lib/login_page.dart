@@ -5,12 +5,15 @@ import 'package:schooler/parent/start_page_parent.dart';
 import 'student/student_start_page.dart';
 
 class LoginPage extends StatefulWidget {
+  _LoginPageState pageState = _LoginPageState();
+
   @override
   _LoginPageState createState() => _LoginPageState();
 }
 
 class _LoginPageState extends State<LoginPage> {
   String chosenAccount;
+
   void choseAccount() {
     if (chosenAccount == 'Admin') {
       Navigator.push(
@@ -41,6 +44,11 @@ class _LoginPageState extends State<LoginPage> {
         }),
       );
     }
+  }
+
+  String getChosenAccount() {
+    print(chosenAccount);
+    return chosenAccount;
   }
 
   List accounts = ['Admin', 'Parent', 'Teacher', 'Student'];
@@ -82,10 +90,6 @@ class _LoginPageState extends State<LoginPage> {
               width: 133,
               decoration: BoxDecoration(
                 color: Colors.white,
-                // border: Border.all(
-                //   color: Colors.black,
-                //   width: 1.0,
-                // ),
                 borderRadius: BorderRadius.circular(10.0),
               ),
               child: Padding(
@@ -183,6 +187,7 @@ class _LoginPageState extends State<LoginPage> {
             FlatButton(
               onPressed: () {
                 choseAccount();
+                getChosenAccount();
               },
               child: Text('Login'),
               color: Colors.white,

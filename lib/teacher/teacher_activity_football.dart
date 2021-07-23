@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class ParentActivityDetails extends StatelessWidget {
+class TeacherActivityFootball extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,9 +25,7 @@ class ParentActivityDetails extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20.0),
                 ),
               ),
-              SizedBox(
-                height: 15.0,
-              ),
+              SizedBox(),
               Text(
                 'Football is one of the most important and most popular sports ever. It is a team sport played between two teams of eleven players each. Let your kid enjoy playing soccer and making friends in the best sports ever.',
                 style: TextStyle(
@@ -78,6 +76,9 @@ class ParentActivityDetails extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
+                  SizedBox(
+                    height: 8.0,
+                  ),
                   Text(
                     'Saturday: From 11:15 AM to 12:00 PM',
                     style: TextStyle(
@@ -95,18 +96,6 @@ class ParentActivityDetails extends StatelessWidget {
               SizedBox(
                 height: 10.0,
               ),
-              Center(
-                child: RaisedButton(
-                  color: Colors.teal,
-                  onPressed: () {},
-                  child: Text(
-                    'Subscription for 200 EGP',
-                    style: TextStyle(
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
-              )
             ]),
       ),
     );
