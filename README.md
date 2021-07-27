@@ -1,6 +1,14 @@
 # schooler
 
-A new Flutter project.
+Schooler is a flutter Mobile App project targets parents, teachers and students in a Primary School System.
+
+The parent should see his son profile his attendance at school his assignment his schedule and trips if organized by school.
+The student should see most of the parent can see.
+The teacher should post attendance of the class upload assignment if wishes and mark the assignments and upload grades.
+The app has a panel for Admin to add/delete most of components.
+
+The Project is Heavily focused on the interface (ui) Part. meaning it doesn't have a lot of functionality.
+
 
 ## Getting Started
 
